@@ -1,6 +1,6 @@
 import React from 'react'
-import Brandmiddle from './BrandMiddle.js'
-import ProductsSection from './ProductSection.js'
+import Brandmiddle from './BrandMiddle'
+import ProductsSection from './ProductSection'
 import axios from 'axios'
 
 const HeroSection = async () => {
