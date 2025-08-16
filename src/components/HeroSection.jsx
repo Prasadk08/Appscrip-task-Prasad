@@ -1,15 +1,21 @@
-"use server";
-import React from 'react'
-import Brandmiddle from './BrandMiddle'
-import ProductsSection from './ProductSection'
-import axios from 'axios'
+import React from "react";
+import Brandmiddle from "./BrandMiddle";
+import ProductsSection from "./ProductSection";
 
 const getProducts = async () => {
   try {
-    const res = await axios.get("https://fakestoreapi.com/products", {
-      headers: { "Cache-Control": "no-store" },
+    const res = await fetch("https://fakestoreapi.com/products", {
+      cache: "no-store",
+      headers: {
+        Accept: "application/json",
+      },
     });
-    return res.data;
+
+    if (!res.ok) {
+      throw new Error(`Failed to fetch products: ${res.status}`);
+    }
+
+    return await res.json();
   } catch (err) {
     console.error("Error fetching products:", err);
     return [];
@@ -18,12 +24,13 @@ const getProducts = async () => {
 
 const HeroSection = async () => {
   const products = await getProducts();
+
   return (
     <>
       <Brandmiddle />
       <ProductsSection products={products} />
     </>
-  )
-}
+  );
+};
 
 export default HeroSection;
