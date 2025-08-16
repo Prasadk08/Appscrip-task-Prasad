@@ -1,3 +1,4 @@
+"use server";
 import React from 'react'
 import Brandmiddle from './BrandMiddle'
 import ProductsSection from './ProductSection'
@@ -15,8 +16,8 @@ const getProducts = async () => {
   }
 };
 
-const HeroSection =  async() => {
-   const products = await getProducts();
+const HeroSection = async () => {
+  const products = await getProducts();
   return (
     <>
       <Brandmiddle />
@@ -25,6 +26,4 @@ const HeroSection =  async() => {
   )
 }
 
-
-
-export default HeroSection
+export default HeroSection;
