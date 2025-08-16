@@ -1,5 +1,5 @@
 import React from 'react'
-import Brandmiddle from './Brandmiddle.js'
+import Brandmiddle from './BrandMiddle.js'
 import ProductsSection from './ProductSection.js'
 import axios from 'axios'
 
