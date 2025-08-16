@@ -73,13 +73,13 @@ export default function Footer() {
             <FaPinterest />
           </div>
           <h4 className="text-sm font-semibold mb-2">mettà muse ACCEPTS</h4>
-          <div className="flex gap-2 flex-wrap">
+          {/* <div className="flex gap-2 flex-wrap">
             <Image src="/payments/applepay.png" alt="Apple Pay" width={40} height={25} />
             <Image src="/payments/googlepay.png" alt="Google Pay" width={40} height={25} />
             <Image src="/payments/mastercard.png" alt="Mastercard" width={40} height={25} />
             <Image src="/payments/amex.png" alt="Amex" width={40} height={25} />
             <Image src="/payments/paypal.png" alt="Paypal" width={40} height={25} />
-          </div>
+          </div> */}
         </div>
       </div>
 

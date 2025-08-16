@@ -1,5 +1,7 @@
 import { Search, User, ShoppingBag, Heart } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { FaIcons } from "react-icons/fa";
 
 export default function Navbar() {
   return (
@@ -10,22 +12,19 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Left Logo */}
           <div className="flex items-center gap-4">
-            <Image
-              src="/logo-icon.svg" // तुझ्या लोगोचा path
-              alt="Logo"
-              width={32}
-              height={32}
-            />
-            <h1 className="text-lg font-extrabold tracking-wide">LOGO</h1>
+            <FaIcons className="text-xl" />
+           
+              <a href="/" className="text-lg font-extrabold tracking-wide">LOGO</a>
+           
           </div>
 
           {/* Middle Links */}
           <nav className="hidden md:flex gap-8 text-sm font-medium tracking-wide">
-            <a href="#" className="hover:text-gray-500">SHOP</a>
-            <a href="#" className="hover:text-gray-500">SKILLS</a>
-            <a href="#" className="hover:text-gray-500">STORIES</a>
-            <a href="#" className="hover:text-gray-500">ABOUT</a>
-            <a href="#" className="hover:text-gray-500">CONTACT US</a>
+            <a href="/shops" className="hover:text-gray-500">SHOP</a>
+            <a href="/skills" className="hover:text-gray-500">SKILLS</a>
+            <a href="/stories" className="hover:text-gray-500">STORIES</a>
+            <a href="/about" className="hover:text-gray-500">ABOUT</a>
+            <a href="/contact" className="hover:text-gray-500">CONTACT US</a>
           </nav>
 
           {/* Right Icons */}
